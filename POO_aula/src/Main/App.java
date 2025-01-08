@@ -1,4 +1,8 @@
+package Main;
+import Entidades.ContaBank;
+
 public class App {
+
     public static void main(String[] args) throws Exception {
         ContaBank co1 = new ContaBank("", 0, false, " ", 0);
         co1.setNomeCompleto("Arthur Victor da Silva Santos");        
@@ -14,16 +18,26 @@ public class App {
         co3.setNomeCompleto("Maxwell Alves");
         co3.abrirContar("CP");
         co3.setNumeroConta(1234);
+        
+        ContaBank co4 = new ContaBank("", 0, false, null, 0);
+        co4.setNumeroConta(12342);
+        co4.setNomeCompleto("Luan Santana");
+        co4.abrirContar("CC");
 
+        
         co1.depositar(1000);
         co2.depositar(500);
         co3.depositar(600);
+        co4.depositar(10000);
 
         co2.fechaConta();
         co2.sacar(300);
 
+        co4.sacar(500);
+
         co1.StatusAtual();
         co2.StatusAtual();
         co3.StatusAtual();
+        co4.StatusAtual();
     }
 }
